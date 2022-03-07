@@ -327,18 +327,7 @@ margin: 2.5rem 2rem;
   transition: font-size 5ms;
 }
 .sentFlag{
-  background-color: var(--primary-color);
-  color: var(--secundary-color);
-  border-radius: 1rem;
-  margin-left: 2rem;
-  width: 20%;
-  text-align: center;
-  font-size: 2.5rem;
-  position: absolute;
-  top: 2rem;
-  opacity: 0;
-  animation-name: sent;
-  animation-duration: 6s;
+  background-color: red;
 
 }
 

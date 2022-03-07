@@ -1,0 +1,360 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+::selection {
+  background-color: rgba(255, 0, 0, .1);
+  color: black;
+
+}
+:root {
+  --primary-color: rgb(240, 248, 255);
+  --secundary-color: rgb(21, 27, 37);
+}
+html, body{
+height: 100%
+}
+.body-container{
+ min-height: 100%;
+}
+#main{
+  overflow: auto;
+  padding-bottom:10px;
+}
+html {
+  background-image: radial-gradient(rgb(240, 248, 255), rgb(21, 27, 37));
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secundary-color);
+  max-width: 1221px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header-container .header-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.__container-color {
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+}
+
+.username {
+  align-self: flex-end;
+  font-size: 2rem;
+  margin-right: 1rem;
+  margin-top: 20px;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: auto;
+}
+.allan-picture {
+  border-radius: 15rem;
+  height: 30rem;
+  margin: 2rem auto;
+  width: 30rem;
+}
+.about {
+  font-size: 2rem;
+  padding: 15px;
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
+
+/*Skills*/
+.card {
+  background-color: var(--primary-color);
+}
+.skills {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.skills h2 {
+  padding-top: 3rem;
+  padding-left: 1rem;
+}
+.skills dl {
+  margin-left: 4rem;
+}
+.skills dt {
+  font-weight: 500;
+}
+.skills dd {
+  margin-left: 3rem;
+  padding: 0.3rem;
+}
+.edu dt {
+  margin-top: 0.5em;
+  font-size: 2rem;
+  padding-left: 10px;
+  font-weight: 500;
+}
+.edu dd {
+  margin-top: 10px;
+  padding-left: 16px;
+  font-size: 1.7rem;
+}
+
+.edu dl {
+  margin-bottom: 3rem;
+}
+
+.edu h2 {
+  font-size: 3rem;
+  padding-left: 1rem;
+}
+
+.skills-article,
+.education {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+
+@media screen and (min-width: 850px) {
+  .card {
+    display: flex;
+    padding-left: 8rem;
+    justify-content: space-around;
+    padding-top: 8rem;
+
+  }
+  .card::after {
+    content: "";
+    clear: both;
+  }
+  .skills {
+    width: 40rem;
+    height: 40rem;
+  }
+  .skills > h2 {
+    padding-left: 14rem;
+    margin-bottom: 2rem;
+  }
+
+  .edu {
+    width: 40rem;
+    height: 40rem;
+  }
+  .edu > h2 {
+    padding-left: 12rem;
+    padding-top: 3rem;
+  }
+
+  .skills,
+  .edu {
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%
+    );
+  }
+  .skills-article {
+    grid-template-columns: repeat(2, 0.2fr);
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+
+  .education {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2rem;
+    margin-left: 5rem;
+  }
+}
+
+/*Footer*/
+
+footer {
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  max-width: 1221px;
+}
+
+.footer-titles {
+  font-size: 2rem;
+  padding-left: 10px;
+}
+
+.info-content > a,
+.links > a,
+.resume > a {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 1rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .contact-info {
+    margin-left: 10rem;
+  }
+}
+
+@media screen and (min-width: 698px) and (min-height: 1368px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%; /* Height of the footer */
+  }
+  .contact-info {
+    margin-left: 10rem;
+  }
+}
+
+/* links*/
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a.link {
+  color: aqua;
+}
+
+a:visited {
+  color: rgba(255, 0, 0, 0.9);
+}
+
+a:hover {
+  background-color: rgba(240, 248, 255, 0.8);
+  color: var(--secundary-color);
+  border-radius: 5px;
+}
+
+a:active {
+  color: yellow;
+}
+/*Form */
+.nav-header {
+  background-color: var(--secundary-color);
+  height: 6rem;
+  font-size: 2rem;
+}
+
+.nav-header a{
+display: inline-block;
+
+margin: 2.5rem 2rem;
+
+}
+
+.nav-header a:hover {
+  background-color: rgba(240, 248, 255, 0.5);
+  color: var(--secundary-color);
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+  width: 30rem;
+}
+.email {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.email label {
+  font-size: 3.5rem;
+}
+.email input {
+  margin-left: 1rem;
+  font-size: 3rem;
+  width: 40rem;
+  border-radius: 15px;
+  outline: none;
+
+}
+.email button {
+  margin-top: 1.5rem;
+  width: 20rem;
+  font-size: 3rem;
+  outline: none;
+  border: 1px gray solid;
+  border-radius: 10px;
+}
+
+.email--btn-color {
+  color: var(--primary-color);
+  background-color: var(--secundary-color);
+}
+.email--btn-color:hover {
+  background-color: rgba(21, 27, 37, 0.8);
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 510px) {
+  .email {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+}
+/* Flags */
+.error{
+  color:red;
+  font-size: 1.5rem;
+  transition: font-size 5ms;
+}
+.sentFlag{
+  background-color: var(--primary-color);
+  color: var(--secundary-color);
+  border-radius: 1rem;
+  margin-left: 2rem;
+  width: 20%;
+  text-align: center;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2rem;
+  opacity: 0;
+  animation-name: sent;
+  animation-duration: 6s;
+
+}
+
+@keyframes sent {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+
+}
+

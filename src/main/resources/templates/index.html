@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/basic.css}">
+    <title>Profile</title>
+
+  </head>
+  <body>
+  <p class="sentFlag" th:text="${message}">Sent</p>
+   <div class="body-container">
+       <div id="main">
+           <section class="header-container __container-color">
+               <article class="header-article">
+                   <p class="username"><a href="https://www.linkedin.com/in/allan31nic" target="_blank">@Allan31nic</a></p>
+                   <img
+                           src="#"
+                           th:src="@{/img/allan.jpeg}"
+                           alt="Picture of Allan Collado"
+                           class="allan-picture"
+
+                   />
+                   <h1 class="name">Allan Eliezer Collado Raudez</h1>
+               </article>
+               <p class="about">
+                   An ambitious and self-motivated Back-End developer with a considerable
+                   technical skill who possesses self-discipline and ability to work with
+                   minimum of supervision. Able to play a key role in Back-End development
+                   to ensure maximum accessibility, user experience and usability. A quick
+                   learner who can absorb new ideas and can communicate clearly and
+                   effectively.
+               </p>
+           </section>
+
+           <div class="card">
+               <section class="skills">
+                   <h2>Skills:</h2>
+                   <article class="skills-article">
+                       <dl>
+                           <dt>Back-end</dt>
+                           <dd>Java</dd>
+                           <dd>Python</dd>
+                           <dd>C++</dd>
+                           <dd>C#</dd>
+                       </dl>
+                       <dl>
+                           <dt>Front-end</dt>
+                           <dd>HTML</dd>
+                           <dd>Css</dd>
+                           <dd>JavaScript</dd>
+                       </dl>
+                       <dl>
+                           <dt>Frameworks</dt>
+                           <dd>Spring*</dd>
+                           <dd>Spark</dd>
+                           <dd>Hibernate</dd>
+                       </dl>
+                       <dl>
+                           <dt>Database</dt>
+                           <dd>Mysql</dd>
+                       </dl>
+                   </article>
+               </section>
+               <section class="edu">
+                   <h2>Education:</h2>
+                   <div class="education">
+                       <dl>
+                           <dt>Blue Ridge Comunity Collage</dt>
+                           <dd>Software developer degree</dd>
+                       </dl>
+                       <dl>
+                           <dt>Certifications</dt>
+                           <dd><span>Currently working on</span>Java 11 Developer Profecional</dd>
+                       </dl>
+                   </div>
+               </section>
+           </div>
+       </div>
+   </div>
+    <footer id="footer">
+      <div class="contact-info">
+        <p class="footer-titles">Contact info</p>
+        <address class="info-content">
+          <a
+            href="https://www.google.com/maps/place/Asheville,+NC/@35.538851,-82.7054901,11z/data=!3m1!4b1!4m5!3m4!1s0x88598ca93c0f6f09:0x94ef31c106343a5d!8m2!3d35.5950581!4d-82.5514869"
+            class="place" target="_blank"
+            >Location: Asheville,NC</a
+          >
+
+          <a href="tel:+17866378782">Phone: (786)637-8782</a>
+
+          <a href="mailto:allan30nic@outlook.com"
+            >Email: allan30nic@outlook.com
+          </a>
+        </address>
+      </div>
+      <div class="links">
+        <p class="footer-titles">Links</p>
+        <a href="https://github.com/allan31nic" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/allan31nic" target="_blank">Linkedin</a>
+      </div>
+      <div class="resume">
+        <p class="footer-titles">Resume</p>
+        <a th:href="@{/resume}">Resume</a>
+      </div>
+    </footer>
+  </body>
+</html>

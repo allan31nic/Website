@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/basic.css}">
+    <title>Resume</title>
+</head>
+<body>
+<nav class="nav-header">
+    <a th:href="@{/home}">Home</a>
+</nav>
+<div class="logo">
+    <img src="#" th:src="@{/img/logo3.png}" alt="" />
+</div>
+
+<form class="email" action="" th:action="@{/send}" th:object="${user}" method="post">
+    <input type="email" th:field="*{userEmail}" placeholder="Example@xxxx.com"/>
+    <p th:if="${#fields.hasErrors('userEmail')}" th:errors="*{userEmail}" class="error">Invalid</p>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -251,6 +251,45 @@ a:active {
   color: yellow;
 }
 /*Form */
+/* Flags */
+.error{
+  color:red;
+  font-size: 1.5rem;
+  transition: font-size 5ms;
+}
+
+.sentFlag{
+  background-color: var(--primary-color);
+  color: var(--secundary-color);
+  border-radius: 1rem;
+  margin-left: 2rem;
+  width: 20%;
+  text-align: center;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2rem;
+  opacity: 0;
+  animation-name: sent;
+  animation-duration: 6s;
+
+}
+
+@keyframes sent {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+
+}
+
 .nav-header {
   background-color: var(--secundary-color);
   height: 6rem;
@@ -320,41 +359,3 @@ margin: 2.5rem 2rem;
   }
 
 }
-/* Flags */
-.error{
-  color:red;
-  font-size: 1.5rem;
-  transition: font-size 5ms;
-}
-.sentFlag{
-  background-color: var(--primary-color);
-  color: var(--secundary-color);
-  border-radius: 1rem;
-  margin-left: 2rem;
-  width: 20%;
-  text-align: center;
-  font-size: 2.5rem;
-  position: absolute;
-  top: 2rem;
-  opacity: 0;
-  animation-name: sent;
-  animation-duration: 6s;
-
-}
-
-@keyframes sent {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-
-}
-
